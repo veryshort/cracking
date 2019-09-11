@@ -5,12 +5,14 @@ import pyperclip
 
 #
 message = 'This is my secret message.'
+# message = 'guv6Jv6Jz!J6rp5r7Jzr66ntrM'
 
 # The encryption/decryption key:
 key = 13
 
 #
 mode = 'encrypt'
+# mode = 'decrypt'
 
 #
 SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.'
@@ -33,7 +35,7 @@ for symbol in message:
         if translatedIndex >= len(SYMBOLS):
             translatedIndex = translatedIndex - len(SYMBOLS)
         elif translatedIndex < 0:
-            translatedIndex = translatedIndex - len(SYMBOLS)
+            translatedIndex = translatedIndex + len(SYMBOLS)
 
         translated = translated + SYMBOLS[translatedIndex]
     else:
